@@ -1,0 +1,187 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\appJEle\\ms_transaccion\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8FCCB674-01BC-47A9-8986-34631BE090A0}|Application\\Application.csproj|c:\\appjele\\ms_transaccion\\application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FCCB674-01BC-47A9-8986-34631BE090A0}|Application\\Application.csproj|solutionrelative:application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C4E410-AEA0-41D0-80DD-EED0E6D019BB}|Infrastructure\\Infrastructure.csproj|c:\\appjele\\ms_transaccion\\infrastructure\\repository\\transaccionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97C4E410-AEA0-41D0-80DD-EED0E6D019BB}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\transaccionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FCCB674-01BC-47A9-8986-34631BE090A0}|Application\\Application.csproj|c:\\appjele\\ms_transaccion\\application\\usescases\\listartransaccionesusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FCCB674-01BC-47A9-8986-34631BE090A0}|Application\\Application.csproj|solutionrelative:application\\usescases\\listartransaccionesusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97C4E410-AEA0-41D0-80DD-EED0E6D019BB}|Infrastructure\\Infrastructure.csproj|c:\\appjele\\ms_transaccion\\infrastructure\\service\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97C4E410-AEA0-41D0-80DD-EED0E6D019BB}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\service\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5759DEB2-E31E-4BB5-9D7A-1506CF4F5EAD}|Domain\\Domain.csproj|c:\\appjele\\ms_transaccion\\domain\\services\\stockservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5759DEB2-E31E-4BB5-9D7A-1506CF4F5EAD}|Domain\\Domain.csproj|solutionrelative:domain\\services\\stockservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D76EDE5-1574-48AF-B918-9A20AA45F548}|Presentation\\Presentation.csproj|c:\\appjele\\ms_transaccion\\presentation\\controller\\transaccioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D76EDE5-1574-48AF-B918-9A20AA45F548}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controller\\transaccioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FCCB674-01BC-47A9-8986-34631BE090A0}|Application\\Application.csproj|c:\\appjele\\ms_transaccion\\application\\dtos\\buscartransacciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FCCB674-01BC-47A9-8986-34631BE090A0}|Application\\Application.csproj|solutionrelative:application\\dtos\\buscartransacciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D76EDE5-1574-48AF-B918-9A20AA45F548}|Presentation\\Presentation.csproj|c:\\appjele\\ms_transaccion\\presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D76EDE5-1574-48AF-B918-9A20AA45F548}|Presentation\\Presentation.csproj|solutionrelative:presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FCCB674-01BC-47A9-8986-34631BE090A0}|Application\\Application.csproj|c:\\appjele\\ms_transaccion\\application\\usescases\\eliminartransaccionsoftusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FCCB674-01BC-47A9-8986-34631BE090A0}|Application\\Application.csproj|solutionrelative:application\\usescases\\eliminartransaccionsoftusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 270,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\appJEle\\ms_transaccion\\Application\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Application\\Mapping\\MappingProfile.cs",
+              "ToolTip": "C:\\appJEle\\ms_transaccion\\Application\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "Application\\Mapping\\MappingProfile.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T21:46:00.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BuscarTransaccionDTO.cs",
+              "DocumentMoniker": "C:\\appJEle\\ms_transaccion\\Application\\DTOs\\BuscarTransaccionDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\BuscarTransaccionDTO.cs",
+              "ToolTip": "C:\\appJEle\\ms_transaccion\\Application\\DTOs\\BuscarTransaccionDTO.cs",
+              "RelativeToolTip": "Application\\DTOs\\BuscarTransaccionDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T21:35:14.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ListarTransaccionesUseCase.cs",
+              "DocumentMoniker": "C:\\appJEle\\ms_transaccion\\Application\\UsesCases\\ListarTransaccionesUseCase.cs",
+              "RelativeDocumentMoniker": "Application\\UsesCases\\ListarTransaccionesUseCase.cs",
+              "ToolTip": "C:\\appJEle\\ms_transaccion\\Application\\UsesCases\\ListarTransaccionesUseCase.cs",
+              "RelativeToolTip": "Application\\UsesCases\\ListarTransaccionesUseCase.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAcwBsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T21:21:48.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductoService.cs",
+              "DocumentMoniker": "C:\\appJEle\\ms_transaccion\\Infrastructure\\Service\\ProductoService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Service\\ProductoService.cs",
+              "ToolTip": "C:\\appJEle\\ms_transaccion\\Infrastructure\\Service\\ProductoService.cs",
+              "RelativeToolTip": "Infrastructure\\Service\\ProductoService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAEwCcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T21:25:06.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StockService.cs",
+              "DocumentMoniker": "C:\\appJEle\\ms_transaccion\\Domain\\Services\\StockService.cs",
+              "RelativeDocumentMoniker": "Domain\\Services\\StockService.cs",
+              "ToolTip": "C:\\appJEle\\ms_transaccion\\Domain\\Services\\StockService.cs",
+              "RelativeToolTip": "Domain\\Services\\StockService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAhwCEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T21:25:06.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TransaccionController.cs",
+              "DocumentMoniker": "C:\\appJEle\\ms_transaccion\\Presentation\\Controller\\TransaccionController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controller\\TransaccionController.cs",
+              "ToolTip": "C:\\appJEle\\ms_transaccion\\Presentation\\Controller\\TransaccionController.cs",
+              "RelativeToolTip": "Presentation\\Controller\\TransaccionController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwDUAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T20:58:37.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\appJEle\\ms_transaccion\\Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\Program.cs",
+              "ToolTip": "C:\\appJEle\\ms_transaccion\\Presentation\\Program.cs",
+              "RelativeToolTip": "Presentation\\Program.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAowEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T20:57:56.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EliminarTransaccionSoftUseCase.cs",
+              "DocumentMoniker": "C:\\appJEle\\ms_transaccion\\Application\\UsesCases\\EliminarTransaccionSoftUseCase.cs",
+              "RelativeDocumentMoniker": "Application\\UsesCases\\EliminarTransaccionSoftUseCase.cs",
+              "ToolTip": "C:\\appJEle\\ms_transaccion\\Application\\UsesCases\\EliminarTransaccionSoftUseCase.cs",
+              "RelativeToolTip": "Application\\UsesCases\\EliminarTransaccionSoftUseCase.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAADwvyIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T20:43:34.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TransaccionRepository.cs",
+              "DocumentMoniker": "C:\\appJEle\\ms_transaccion\\Infrastructure\\Repository\\TransaccionRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repository\\TransaccionRepository.cs",
+              "ToolTip": "C:\\appJEle\\ms_transaccion\\Infrastructure\\Repository\\TransaccionRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repository\\TransaccionRepository.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAA5wEUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T20:40:56.869Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

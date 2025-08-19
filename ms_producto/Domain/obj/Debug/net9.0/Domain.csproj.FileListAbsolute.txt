@@ -1,0 +1,11 @@
+c:\appJEle\ms_producto\Domain\bin\Debug\net9.0\Domain.deps.json
+c:\appJEle\ms_producto\Domain\bin\Debug\net9.0\Domain.dll
+c:\appJEle\ms_producto\Domain\bin\Debug\net9.0\Domain.pdb
+c:\appJEle\ms_producto\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+c:\appJEle\ms_producto\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
+c:\appJEle\ms_producto\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
+c:\appJEle\ms_producto\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
+c:\appJEle\ms_producto\Domain\obj\Debug\net9.0\Domain.dll
+c:\appJEle\ms_producto\Domain\obj\Debug\net9.0\refint\Domain.dll
+c:\appJEle\ms_producto\Domain\obj\Debug\net9.0\Domain.pdb
+c:\appJEle\ms_producto\Domain\obj\Debug\net9.0\ref\Domain.dll

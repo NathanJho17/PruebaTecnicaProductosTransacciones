@@ -1,0 +1,51 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\appJEle\\ms_transaccion\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8FCCB674-01BC-47A9-8986-34631BE090A0}|Application\\Application.csproj|c:\\appjele\\ms_transaccion\\application\\usescases\\creartransaccionusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FCCB674-01BC-47A9-8986-34631BE090A0}|Application\\Application.csproj|solutionrelative:application\\usescases\\creartransaccionusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 270,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CrearTransaccionUseCase.cs",
+              "DocumentMoniker": "C:\\appJEle\\ms_transaccion\\Application\\UsesCases\\CrearTransaccionUseCase.cs",
+              "RelativeDocumentMoniker": "Application\\UsesCases\\CrearTransaccionUseCase.cs",
+              "ToolTip": "C:\\appJEle\\ms_transaccion\\Application\\UsesCases\\CrearTransaccionUseCase.cs",
+              "RelativeToolTip": "Application\\UsesCases\\CrearTransaccionUseCase.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAQwEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T21:56:39.864Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

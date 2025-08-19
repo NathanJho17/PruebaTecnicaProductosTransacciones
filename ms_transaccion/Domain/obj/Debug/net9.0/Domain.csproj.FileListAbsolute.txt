@@ -1,0 +1,11 @@
+C:\appJEle\ms_transaccion\Domain\bin\Debug\net9.0\Domain.deps.json
+C:\appJEle\ms_transaccion\Domain\bin\Debug\net9.0\Domain.dll
+C:\appJEle\ms_transaccion\Domain\bin\Debug\net9.0\Domain.pdb
+C:\appJEle\ms_transaccion\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\appJEle\ms_transaccion\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
+C:\appJEle\ms_transaccion\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
+C:\appJEle\ms_transaccion\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
+C:\appJEle\ms_transaccion\Domain\obj\Debug\net9.0\Domain.dll
+C:\appJEle\ms_transaccion\Domain\obj\Debug\net9.0\refint\Domain.dll
+C:\appJEle\ms_transaccion\Domain\obj\Debug\net9.0\Domain.pdb
+C:\appJEle\ms_transaccion\Domain\obj\Debug\net9.0\ref\Domain.dll
