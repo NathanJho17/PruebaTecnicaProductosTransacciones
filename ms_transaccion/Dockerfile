@@ -10,7 +10,7 @@ COPY ["./Presentation/Presentation.csproj", "Presentation/"]
 COPY ["./Application/Application.csproj", "Application/"]
 COPY ["./Domain/Domain.csproj", "Domain/"]
 COPY ["./Infrastructure/Infrastructure.csproj", "Infrastructure/"]
-COPY ["./msTransaccion.Test/msTransaccion.Test.csproj", "msTransaccion.Test/"]
+COPY ["./msTransaccion.Tests/msTransaccion.Tests.csproj", "msTransaccion.Tests/"]
 
 RUN dotnet restore "mstransaccion.sln"
 

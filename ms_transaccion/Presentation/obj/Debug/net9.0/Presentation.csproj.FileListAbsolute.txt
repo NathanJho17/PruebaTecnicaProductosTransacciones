@@ -175,4 +175,3 @@ C:\appJEle\ms_transaccion\Presentation\obj\Debug\net9.0\refint\Presentation.dll
 C:\appJEle\ms_transaccion\Presentation\obj\Debug\net9.0\Presentation.pdb
 C:\appJEle\ms_transaccion\Presentation\obj\Debug\net9.0\Presentation.genruntimeconfig.cache
 C:\appJEle\ms_transaccion\Presentation\obj\Debug\net9.0\ref\Presentation.dll
-C:\appJEle\ms_transaccion\Presentation\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

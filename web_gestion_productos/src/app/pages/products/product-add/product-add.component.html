@@ -1,0 +1,7 @@
+<div class="container-form">
+  <app-form-product
+    [formType]="'Registro'"
+    (productFull)="createProduct($event)"
+  />
+  <span class="message-create-edit">{{ createdMessage() }}</span>
+</div>

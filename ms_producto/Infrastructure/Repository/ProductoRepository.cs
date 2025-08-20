@@ -53,6 +53,7 @@ public class ProductoRepository : IProductoRepository
     {
         try
         {
+             _context.Producto.Update(producto);
             await _context.SaveChangesAsync();
             return producto;
         }

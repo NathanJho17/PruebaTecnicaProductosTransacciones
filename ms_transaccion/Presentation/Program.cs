@@ -32,14 +32,14 @@ builder.Services.AddScoped<EliminarTransaccionSoftUseCase>();
 
 builder.Services.AddHttpClient("ApiProductos", client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5224");
+    client.BaseAddress = new Uri(builder.Configuration["ApisExternas:Productos"]);
 });
 
 builder.Services.AddSwaggerGen(c => {
     c.SwaggerDoc("v1", new OpenApiInfo
     {
         Version = "v1",
-        Title = "Micro servicio Transacción"
+        Title = "Micro servicio Transacciï¿½n"
     });
 });
 

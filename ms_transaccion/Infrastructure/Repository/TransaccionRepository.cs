@@ -22,7 +22,8 @@ namespace Infrastructure.Repository
         {
             try
             {
-                _context.Transaccion.Update(Transaccion);
+                Transaccion.Activo = false;
+                _context.Entry(Transaccion).State = EntityState.Modified;
                 await _context.SaveChangesAsync();
                 return true;
             }
@@ -63,17 +64,17 @@ namespace Infrastructure.Repository
             }
         }
 
-        public async Task<List<Transaccion>> ListarTransacciones(int productoId,int desde, int limite, DateTime? fechaDesde, DateTime? fechaHasta,
+        public async Task<List<Transaccion>> ListarTransacciones(int productoId, int desde, int limite, DateTime? fechaDesde, DateTime? fechaHasta,
              string tipoTransaccion)
         {
             try
             {
-                    var transacciones = await _context.Transaccion
-                        .Where(p => p.Activo == true &&
-                       p.ProductoId== productoId)
-                       .Skip(((desde == 0) ? 1 : desde - 1) * limite)
-                        .Take(limite)
-                        .ToListAsync();
+                var transacciones = await _context.Transaccion
+                    .Where(p => p.Activo == true &&
+                   p.ProductoId == productoId)
+                   .Skip(((desde == 0) ? 1 : desde - 1) * limite)
+                    .Take(limite)
+                    .ToListAsync();
 
                 if (!string.IsNullOrWhiteSpace(tipoTransaccion))
                 {
@@ -81,9 +82,9 @@ namespace Infrastructure.Repository
                       .Where(t => t.Tipo.Equals(tipoTransaccion))
                       .ToList();
                 }
-                if (fechaDesde!=null && fechaHasta!=null)
+                if (fechaDesde != null && fechaHasta != null)
                 {
-                    return transacciones.Where(t=>
+                    return transacciones.Where(t =>
                        t.FechaCreacion >= fechaDesde && t.FechaCreacion <= fechaHasta)
                        .ToList();
                 }
@@ -103,7 +104,7 @@ namespace Infrastructure.Repository
             {
                 Transaccion? encontrado =
                 await _context.Transaccion.Where(p => p.Id.Equals(TransaccionId)).FirstOrDefaultAsync();
-                  
+
 
                 return encontrado;
             }

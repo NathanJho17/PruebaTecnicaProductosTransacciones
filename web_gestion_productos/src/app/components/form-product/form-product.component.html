@@ -1,0 +1,150 @@
+<div class="container-form">
+  <h2 class="tittle-form">{{ formTittle }}</h2>
+  <form
+    class="form-product"
+    [formGroup]="productForm"
+    (ngSubmit)="saveProduct()"
+  >
+    <div class="form-col">
+      <label for="id">ID: </label>
+      <input id="id" type="text" formControlName="id" />
+
+      <label for="nombreProducto">Nombre producto: </label>
+      <input
+        id="nombreProducto"
+        type="text"
+        [class.input-danger]="
+          productForm.get('nombreProducto')?.invalid &&
+          productForm.get('nombreProducto')?.touched
+        "
+        formControlName="nombreProducto"
+      />
+
+      @if (productForm.get('description')?.invalid &&
+      productForm.get('description')?.touched) {
+      <div class="text-danger">
+        @if (productForm.get('description')?.errors?.['required']) {
+        <span>Este campo es requerido</span>
+        }
+      </div>
+      }
+
+      <label for="descripcion">Descripción: </label>
+      <input
+        id="descripcion"
+        type="text"
+        [class.input-danger]="
+          productForm.get('descripcion')?.invalid &&
+          productForm.get('descripcion')?.touched
+        "
+        formControlName="descripcion"
+      />
+
+      @if (productForm.get('descripcion')?.invalid &&
+      productForm.get('description')?.touched) {
+      <div class="text-danger">
+        @if (productForm.get('descripcion')?.errors?.['required']) {
+        <span>Este campo es requerido</span>
+        }
+      </div>
+      }
+
+      <label for="precio">Precio: </label>
+      <input
+        id="precio"
+        type="text"
+        [class.input-danger]="
+          productForm.get('precio')?.invalid &&
+          productForm.get('precio')?.touched
+        "
+        formControlName="precio"
+      />
+      @if (productForm.get('precio')?.invalid &&
+      productForm.get('precio')?.touched) {
+      <div class="text-danger">
+        @if (productForm.get('precio')?.errors?.['required']) {
+        <span>Este campo es requerido</span>
+        }
+      </div>
+      }
+
+      <button type="button" class="btn-reset" (click)="resetForm()">
+        Reiniciar
+      </button>
+    </div>
+
+    <div class="form-col">
+      <label for="stock">stock: </label>
+      <input
+        id="stock"
+        type="text"
+        [class.input-danger]="
+          productForm.get('stock')?.invalid && productForm.get('stock')?.touched
+        "
+        formControlName="stock"
+      />
+
+      @if (productForm.get('stock')?.invalid &&
+      productForm.get('stock')?.touched) {
+      <div class="text-danger">
+        @if (productForm.get('stock')?.errors?.['required']) {
+        <span>Este campo es requerido</span>
+        }
+      </div>
+      }
+
+      <label for="imagen">imagen: </label>
+      <input
+        id="imagen"
+        type="text"
+        [class.input-danger]="
+          productForm.get('imagen')?.invalid &&
+          productForm.get('imagen')?.touched
+        "
+        formControlName="imagen"
+      />
+
+      @if (productForm.get('imagen')?.invalid &&
+      productForm.get('imagen')?.touched) {
+      <div class="text-danger">
+        @if (productForm.get('imagen')?.errors?.['required']) {
+        <span>Este campo es requerido</span>
+        }
+      </div>
+      }
+
+      <label for="idCategoria">Categoría</label>
+      <select
+        id="idCategoria"
+        formControlName="idCategoria"
+        class="form-select"
+        (change)="onCategoriaChange($event)">
+      >
+        <option value="" disabled>-- Seleccione una categoría --</option>
+        <option *ngFor="let cat of categorias()" [value]="cat.categoriaId">
+          {{ cat.nombreCategoria }}
+        </option>
+      </select>
+
+      @if (productForm.get('idCategoria')?.invalid &&
+      productForm.get('idCategoria')?.touched) {
+      <div class="text-danger">
+        @if (productForm.get('idCategoria')?.errors?.['required']) {
+        <span>Este campo es requerido</span>
+        }
+      </div>
+      }
+
+      <button
+        type="submit"
+        [ngClass]="{
+          'btn-submit': productForm.valid,
+          'btn-submit-disable': productForm.invalid
+        }"
+        [disabled]="productForm.invalid"
+      >
+        Enviar
+      </button>
+    </div>
+  </form>
+</div>

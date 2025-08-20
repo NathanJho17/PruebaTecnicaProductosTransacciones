@@ -1,7 +1,9 @@
 using Application;
 using Application.UsesCases;
 using Domain;
+using Domain.Interfaces;
 using Infrastructure;
+using Infrastructure.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using System.ComponentModel.DataAnnotations;
@@ -15,11 +17,13 @@ builder.Services.AddOpenApi();
 
 // DI
 builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
+builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
 builder.Services.AddScoped<CrearProductoUseCase>();
 builder.Services.AddScoped<EditarProductoCase>();
 builder.Services.AddScoped<ListarProductosUseCase>();
 builder.Services.AddScoped<EliminarProductoSoftUseCase>();
 builder.Services.AddScoped<ObtenerProductoIdCase>();
+builder.Services.AddScoped<ListarCategoriaUseCase>();
 
 
 

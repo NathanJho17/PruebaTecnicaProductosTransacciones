@@ -1,0 +1,7 @@
+<div class="container-form">
+  <app-form-product
+    [formType]="'Edición'"
+    (productFull)="editProduct($event)"
+  />
+  <span class="message-create-edit">{{ editedMessage() }}</span>
+</div>

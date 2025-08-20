@@ -1,0 +1,52 @@
+<div class="container-products">
+  <app-button
+    [textButton]="'Agregar'"
+    [colorButton]="'blue'"
+    [colorTextButton]="'#fff'"
+    [actionButton]="'Add'"
+  />
+
+  <div class="product-table-wrapper">
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>Categoria</th>
+          <th>Nombre del producto</th>
+          <th>Descripción</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Imagen</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (producto of productosSeleccionados(); track producto.productoId) {
+        <tr>
+          <td>{{ producto.categoriaProducto.nombreCategoria }}</td>
+          <td>{{ producto.nombreProducto }}</td>
+          <td>{{ producto.descripcion }}</td>
+          <td>{{ producto.precio }}</td>
+          <td>{{ producto.stock }}</td>
+          <td>
+            <app-image [urlImage]="producto.imagen" />
+          </td>
+          <td>
+            <button
+              (click)="routeToEditProduct(producto.productoId)"
+            >
+              Editar
+            </button>
+            <button (click)="deleteProduct(producto.productoId)">
+              Eliminar
+            </button>
+             <button (click)="routeToTtansactionsProduct(producto.productoId)">
+              Ir a transacciones
+            </button>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  <span>{{ deleteMessage() }}</span>
+</div>
