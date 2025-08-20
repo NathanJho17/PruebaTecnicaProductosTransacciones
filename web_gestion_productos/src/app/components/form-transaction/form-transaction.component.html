@@ -1,111 +1,113 @@
-<div class="container-form">
-  <h2 class="tittle-form">{{ formTittle }}</h2>
-  <form
-    class="form-transaction"
-    [formGroup]="transactionForm"
-    (ngSubmit)="saveTransaction()"
-  >
-    <div class="form-col">
-      <label for="id">ID: </label>
-      <input id="id" type="text" formControlName="id" />
+<div class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md dark:bg-gray-800">
+  <h2 class="text-2xl font-semibold mb-6 text-gray-800 dark:text-white">{{ formTittle }}</h2>
 
-      <label for="tipoTransaccion">Tipo Transacción: </label>
-      <select
-        id="tipoTransaccion"
-        formControlName="tipoTransaccion"
-        class="form-select"
-        (change)="onTipoTransaccionChange($event)">
+  <form [formGroup]="transactionForm" (ngSubmit)="saveTransaction()" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+    <div class="flex flex-col gap-4">
+      <div>
+        <label for="id" class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">ID</label>
+        <input
+          id="id"
+          type="text"
+          formControlName="id"
+          class="block w-full p-2 border border-gray-300 rounded-lg bg-gray-50 text-sm
+                 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+        />
+      </div>
+
+      <div>
+        <label for="tipoTransaccion" class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">Tipo Transacción</label>
+        <select
+          id="tipoTransaccion"
+          formControlName="tipoTransaccion"
+          (change)="onTipoTransaccionChange($event)"
+          [ngClass]="{
+            'border-red-500 ring-red-500': transactionForm.get('tipoTransaccion')?.invalid && transactionForm.get('tipoTransaccion')?.touched
+          }"
+          class="block w-full p-2 border rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+        >
+          <option value="" disabled>-- Seleccione tipo transacción --</option>
+          <option *ngFor="let tipo of tipoTransacciones" [value]="tipo">{{ tipo }}</option>
+        </select>
+        <p *ngIf="transactionForm.get('tipoTransaccion')?.invalid && transactionForm.get('tipoTransaccion')?.touched"
+           class="text-red-500 text-xs mt-1">
+          Este campo es requerido
+        </p>
+      </div>
+
+      <div>
+        <label for="cantidad" class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">Cantidad</label>
+        <input
+          id="cantidad"
+          type="text"
+          formControlName="cantidad"
+          [ngClass]="{
+            'border-red-500 ring-red-500': transactionForm.get('cantidad')?.invalid && transactionForm.get('cantidad')?.touched
+          }"
+          class="block w-full p-2 border rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+        />
+        <p *ngIf="transactionForm.get('cantidad')?.invalid && transactionForm.get('cantidad')?.touched"
+           class="text-red-500 text-xs mt-1">
+          Este campo es requerido
+        </p>
+      </div>
+
+      <button
+        type="button"
+        (click)="resetForm()"
+        class="mt-2 px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500"
       >
-        <option value="" disabled>-- Seleccione tipo transacción --</option>
-        <option *ngFor="let tipo of tipoTransacciones" [value]="tipo">
-          {{tipo }}
-        </option>
-      </select>
-      @if (transactionForm.get('tipoTransaccion')?.invalid &&
-      transactionForm.get('tipoTransaccion')?.touched) {
-      <div class="text-danger">
-        @if (transactionForm.get('tipoTransaccion')?.errors?.['required']) {
-        <span>Este campo es requerido</span>
-        }
-      </div>
-      }
-
-     
-      <label for="cantidad">cantidad: </label>
-      <input
-        id="cantidad"
-        type="text"
-        [class.input-danger]="
-          transactionForm.get('cantidad')?.invalid &&
-          transactionForm.get('cantidad')?.touched
-        "
-        formControlName="cantidad"
-      />
-      @if (transactionForm.get('cantidad')?.invalid &&
-      transactionForm.get('cantidad')?.touched) {
-      <div class="text-danger">
-        @if (transactionForm.get('cantidad')?.errors?.['required']) {
-        <span>Este campo es requerido</span>
-        }
-      </div>
-      }
-
-      <button type="button" class="btn-reset" (click)="resetForm()">
         Reiniciar
       </button>
     </div>
 
-    <div class="form-col">
-      <label for="precioUnitario">precioUnitario: </label>
-      <input
-        id="precioUnitario"
-        type="text"
-        [class.input-danger]="
-          transactionForm.get('precioUnitario')?.invalid && transactionForm.get('precioUnitario')?.touched
-        "
-        formControlName="precioUnitario"
-      />
-
-      @if (transactionForm.get('precioUnitario')?.invalid &&
-      transactionForm.get('precioUnitario')?.touched) {
-      <div class="text-danger">
-        @if (transactionForm.get('precioUnitario')?.errors?.['required']) {
-        <span>Este campo es requerido</span>
-        }
+    <div class="flex flex-col gap-4">
+      <div>
+        <label for="precioUnitario" class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">Precio Unitario</label>
+        <input
+          id="precioUnitario"
+          type="text"
+          formControlName="precioUnitario"
+          [ngClass]="{
+            'border-red-500 ring-red-500': transactionForm.get('precioUnitario')?.invalid && transactionForm.get('precioUnitario')?.touched
+          }"
+          class="block w-full p-2 border rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+        />
+        <p *ngIf="transactionForm.get('precioUnitario')?.invalid && transactionForm.get('precioUnitario')?.touched"
+           class="text-red-500 text-xs mt-1">
+          Este campo es requerido
+        </p>
       </div>
-      }
 
-      <label for="detalle">detalle: </label>
-      <input
-        id="detalle"
-        type="text"
-        [class.input-danger]="
-          transactionForm.get('detalle')?.invalid &&
-          transactionForm.get('detalle')?.touched
-        "
-        formControlName="detalle"
-      />
-
-      @if (transactionForm.get('detalle')?.invalid &&
-      transactionForm.get('detalle')?.touched) {
-      <div class="text-danger">
-        @if (transactionForm.get('detalle')?.errors?.['required']) {
-        <span>Este campo es requerido</span>
-        }
+      <div>
+        <label for="detalle" class="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300">Detalle</label>
+        <input
+          id="detalle"
+          type="text"
+          formControlName="detalle"
+          [ngClass]="{
+            'border-red-500 ring-red-500': transactionForm.get('detalle')?.invalid && transactionForm.get('detalle')?.touched
+          }"
+          class="block w-full p-2 border rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+        />
+        <p *ngIf="transactionForm.get('detalle')?.invalid && transactionForm.get('detalle')?.touched"
+           class="text-red-500 text-xs mt-1">
+          Este campo es requerido
+        </p>
       </div>
-      }
 
       <button
         type="submit"
-        [ngClass]="{
-          'btn-submit': transactionForm.valid,
-          'btn-submit-disable': transactionForm.invalid
-        }"
         [disabled]="transactionForm.invalid"
+        [ngClass]="{
+          'bg-blue-600 hover:bg-blue-700 text-white': transactionForm.valid,
+          'bg-gray-400 text-gray-700 cursor-not-allowed': transactionForm.invalid
+        }"
+        class="mt-4 px-4 py-2 rounded-lg"
       >
         Enviar
       </button>
     </div>
+
   </form>
 </div>
-

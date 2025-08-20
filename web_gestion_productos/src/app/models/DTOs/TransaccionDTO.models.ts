@@ -23,5 +23,5 @@ export interface TransaccionCrearDTO {
 }
 
 export interface TransaccionEditarDTO extends TransaccionCrearDTO {
-  esActivo: boolean;      
+  esActivo?: boolean;      
 }

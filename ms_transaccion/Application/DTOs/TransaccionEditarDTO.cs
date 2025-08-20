@@ -8,6 +8,6 @@ namespace Application.DTOs
 {
     public class TransaccionEditarDTO:TransaccionCrearDTO
     {
-        public bool EsActivo { get; set; }
+        public bool EsActivo { get; set; } = true;
     }
 }

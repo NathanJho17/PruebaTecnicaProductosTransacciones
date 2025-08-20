@@ -4,8 +4,6 @@ import { ProductoVerDTO } from '../../../models/DTOs/ProductoDTO.model';
 import { ImageComponent } from '../../../components/image/image.component';
 import { ButtonComponent } from '../../../components/button/button.component';
 import { Router } from '@angular/router';
-import { CategoryService } from '../../../services/category.service';
-import { CategoriaVerDTO } from '../../../models/DTOs/CategoriaDTO.model';
 
 @Component({
   selector: 'app-product-list',
@@ -20,7 +18,10 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProducts(1, 10);
-  }
+
+    
+}
+
   productos = signal<ProductoVerDTO[]>([]);
 
   productosSeleccionados = signal<ProductoVerDTO[]>([]);

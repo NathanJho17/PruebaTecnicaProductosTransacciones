@@ -6,25 +6,89 @@
     [actionButton]="'Add'"
     [entity]="'Transaccion'"
   />
-  <div class="product-table-wrapper">
-    <table class="transactions-table">
-      <thead>
+  <form [formGroup]="formSearch" 
+   (ngSubmit)="searchRecords()"
+  class="flex flex-wrap items-end gap-x-6 gap-y-3">
+  <div class="inline-flex items-center gap-2">
+    <label for="fechaDesde" class="text-sm font-medium text-gray-900 dark:text-white">
+      Fecha desde:
+    </label>
+    <input
+      id="fechaDesde"
+      type="date"
+      formControlName="fechaDesde"
+      class="w-48 p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs
+             focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600
+             dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+    />
+  </div>
+
+  <div class="inline-flex items-center gap-2">
+    <label for="fechaHasta" class="text-sm font-medium text-gray-900 dark:text-white">
+      Fecha hasta:
+    </label>
+    <input
+      id="fechaHasta"
+      type="date"
+      formControlName="fechaHasta"
+      class="w-48 p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs
+             focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600
+             dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+    />
+  </div>
+
+  <div class="inline-flex items-center gap-2">
+    <select
+      id="tipo"
+      formControlName="tipo"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+             focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
+             dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400
+             dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+    >
+      <option value="" disabled>-- Seleccione tipo transacción --</option>
+      <option *ngFor="let tipo of tipoTransacciones" [value]="tipo">
+        {{ tipo }}
+      </option>
+    </select>
+  </div>
+
+  <button
+    type="button"
+    class="h-9 px-4 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700
+           focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
+    (click)="searchRecords()"
+  >
+    Buscar
+  </button>
+</form>
+
+
+  <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table
+      class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+    >
+      <thead
+        class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+      >
         <tr>
-          <th>Nombre del producto</th>
-          <th>Stock</th>
-          <th>Identificador</th>
-          <th>Tipo transacción</th>
-          <th>Cantidad</th>
-          <th>Precio unitario</th>
-          <th>Precio total</th>
-          <th>Fecha de creación</th>
-          <th>Acciones</th>
+          <th scope="col" class="p-4">Nombre del producto</th>
+          <th scope="col" class="p-4">Stock</th>
+          <th scope="col" class="p-4">Identificador</th>
+          <th scope="col" class="p-4">Tipo transacción</th>
+          <th scope="col" class="p-4">Cantidad</th>
+          <th scope="col" class="p-4">Precio unitario</th>
+          <th scope="col" class="p-4">Precio total</th>
+          <th scope="col" class="p-4">Fecha de creación</th>
+          <th scope="col" class="p-4">Acciones</th>
         </tr>
       </thead>
       <tbody>
-        @for (transaction of transactions(); track
+        @for (transaction of displayedTransacciones(); track
         transaction.identificadorUnico) {
-        <tr>
+        <tr
+          class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
+        >
           <td>{{ transaction.nombreProducto }}</td>
           <td>{{ transaction.stockProducto }}</td>
           <td>{{ transaction.identificadorUnico }}</td>
@@ -34,13 +98,72 @@
           <td>{{ transaction.precioTotal }}</td>
           <td>{{ transaction.fechaCreacion | createDate }}</td>
           <td>
-            <button>Editar</button>
-            <button (click)="deleteTransaction(transaction.identificadorUnico)">Eliminar</button>
+            <button
+              type="button"
+              class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              (click)="routeToEditTransaction(transaction.identificadorUnico)"
+            >
+              Editar
+            </button>
+            <button
+              type="button"
+              class="px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              (click)="deleteTransaction(transaction.identificadorUnico)"
+            >
+              Eliminar
+            </button>
           </td>
         </tr>
         }
       </tbody>
     </table>
+     <nav class="flex justify-center items-center py-4">
+    <ul class="inline-flex -space-x-px">
+      <li>
+        <button (click)="goToPage(currentPage - 1)" 
+          class="px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg
+                 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400
+                 dark:hover:bg-gray-700 dark:hover:text-white">
+          Prev
+        </button>
+      </li>
+
+      <li *ngFor="let page of [].constructor(totalPages); let i = index">
+        <button (click)="goToPage(i + 1)"
+          [class.bg-blue-500]="currentPage === i + 1"
+          [class.text-white]="currentPage === i + 1"
+          class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700
+                 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+          {{ i + 1 }}
+        </button>
+      </li>
+
+      <li>
+        <button (click)="goToPage(currentPage + 1)" 
+          class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg
+                 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400
+                 dark:hover:bg-gray-700 dark:hover:text-white">
+          Next
+        </button>
+      </li>
+    </ul>
+  </nav>
   </div>
-  <span>{{ deleteMessage() }}</span>
+  @if (deleteMessage()) {
+  <div id="alert-2" class="flex items-center p-4 mb-4 text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+  <svg class="shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+  </svg>
+  <span class="sr-only">Info</span>
+  <div class="ms-3 text-sm font-medium">
+    {{deleteMessage()}}
+  </div>
+  <button type="button" class="ms-auto -mx-1.5 -my-1.5 bg-red-50 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 inline-flex items-center justify-center h-8 w-8 dark:bg-gray-800 dark:text-red-400 dark:hover:bg-gray-700" data-dismiss-target="#alert-2" aria-label="Close">
+    <span class="sr-only">Close</span>
+    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+    </svg>
+  </button>
+</div>
+}
 </div>

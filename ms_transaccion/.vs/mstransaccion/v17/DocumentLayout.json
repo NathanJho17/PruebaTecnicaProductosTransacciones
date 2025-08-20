@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\appJEle\\ms_transaccion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8FCCB674-01BC-47A9-8986-34631BE090A0}|Application\\Application.csproj|c:\\appjele\\ms_transaccion\\application\\usescases\\creartransaccionusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8FCCB674-01BC-47A9-8986-34631BE090A0}|Application\\Application.csproj|solutionrelative:application\\usescases\\creartransaccionusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8FCCB674-01BC-47A9-8986-34631BE090A0}|Application\\Application.csproj|c:\\appjele\\ms_transaccion\\application\\dtos\\transaccioneditardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FCCB674-01BC-47A9-8986-34631BE090A0}|Application\\Application.csproj|solutionrelative:application\\dtos\\transaccioneditardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FCCB674-01BC-47A9-8986-34631BE090A0}|Application\\Application.csproj|c:\\appjele\\ms_transaccion\\application\\dtos\\transaccionverdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FCCB674-01BC-47A9-8986-34631BE090A0}|Application\\Application.csproj|solutionrelative:application\\dtos\\transaccionverdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FCCB674-01BC-47A9-8986-34631BE090A0}|Application\\Application.csproj|c:\\appjele\\ms_transaccion\\application\\usescases\\obtenertransaccionusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FCCB674-01BC-47A9-8986-34631BE090A0}|Application\\Application.csproj|solutionrelative:application\\usescases\\obtenertransaccionusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,23 +22,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 270,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TransaccionEditarDTO.cs",
+              "DocumentMoniker": "C:\\appJEle\\ms_transaccion\\Application\\DTOs\\TransaccionEditarDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\TransaccionEditarDTO.cs",
+              "ToolTip": "C:\\appJEle\\ms_transaccion\\Application\\DTOs\\TransaccionEditarDTO.cs",
+              "RelativeToolTip": "Application\\DTOs\\TransaccionEditarDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T15:59:08.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TransaccionVerDTO.cs",
+              "DocumentMoniker": "C:\\appJEle\\ms_transaccion\\Application\\DTOs\\TransaccionVerDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\TransaccionVerDTO.cs",
+              "ToolTip": "C:\\appJEle\\ms_transaccion\\Application\\DTOs\\TransaccionVerDTO.cs",
+              "RelativeToolTip": "Application\\DTOs\\TransaccionVerDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T15:09:49.852Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CrearTransaccionUseCase.cs",
-              "DocumentMoniker": "C:\\appJEle\\ms_transaccion\\Application\\UsesCases\\CrearTransaccionUseCase.cs",
-              "RelativeDocumentMoniker": "Application\\UsesCases\\CrearTransaccionUseCase.cs",
-              "ToolTip": "C:\\appJEle\\ms_transaccion\\Application\\UsesCases\\CrearTransaccionUseCase.cs",
-              "RelativeToolTip": "Application\\UsesCases\\CrearTransaccionUseCase.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAQwEgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ObtenerTransaccionUseCase.cs",
+              "DocumentMoniker": "C:\\appJEle\\ms_transaccion\\Application\\UsesCases\\ObtenerTransaccionUseCase.cs",
+              "RelativeDocumentMoniker": "Application\\UsesCases\\ObtenerTransaccionUseCase.cs",
+              "ToolTip": "C:\\appJEle\\ms_transaccion\\Application\\UsesCases\\ObtenerTransaccionUseCase.cs",
+              "RelativeToolTip": "Application\\UsesCases\\ObtenerTransaccionUseCase.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACQAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T21:56:39.864Z",
+              "WhenOpened": "2025-08-20T15:09:45.757Z",
               "EditorCaption": ""
             }
           ]
