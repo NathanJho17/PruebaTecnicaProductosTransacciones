@@ -41,7 +41,7 @@ namespace Application.UsesCases
                 var actualizarStockProducto = await _productoExternoService.EditarProducto(obtenerTransaccion.ProductoId, new ProductoEditarDTO
                 {
                     //devolver el stock con la cantidad del registro a inactivar/eliminar lógicamente
-                    Stock = _stockService.ProcesarStock(producto.stock, obtenerTransaccion.Cantidad, "compra"),
+                    Stock = _stockService.ProcesarStock(producto.stock, obtenerTransaccion.Cantidad, "venta"),
                     Descripcion = producto.descripcion,
                     NombreProducto = producto.nombreProducto,
                     EsActivo = producto.esActivo,

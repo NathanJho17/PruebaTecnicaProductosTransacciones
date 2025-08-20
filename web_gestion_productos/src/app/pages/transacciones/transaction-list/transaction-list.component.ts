@@ -97,4 +97,8 @@ export class TransactionListComponent implements OnInit {
     this.updateDisplayedTransacciones();
   }
 
+  routeToPoducts(){
+    this.router.navigate(["products"]);
+  }
+
 }

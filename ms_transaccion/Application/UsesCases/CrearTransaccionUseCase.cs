@@ -60,7 +60,7 @@ namespace Application.UsesCases
 
                 var mapTransaccion = _mapper.Map<Transaccion>(dto);
                 mapTransaccion.NombreProducto = producto.nombreProducto;
-                mapTransaccion.StockProducto = producto.stock;
+                mapTransaccion.StockProducto = actualizarStockProducto.stock;
                 Transaccion crear = await _transaccionRepository.CrearTransaccion(mapTransaccion);
                 TransaccionVerDTO transaccionVerDTO = _mapper.Map<TransaccionVerDTO>(crear);
                 transaccionVerDTO.NombreProducto = producto.nombreProducto;
