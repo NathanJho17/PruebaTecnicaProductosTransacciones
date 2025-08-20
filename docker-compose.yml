@@ -44,6 +44,17 @@ services:
       - "1439:1433"
     volumes:
       - dbTransaccionData:/var/opt/mssql
+  webgestionproducto:
+    build:
+      context: ./web_gestion_productos
+      dockerfile: Dockerfile
+    ports:
+      - "8062:80"
+    depends_on:
+      - msproducto
+      - mstransaccion
+    volumes:
+      - ./dist:/usr/share/nginx/html
 volumes:
     dbProductosData:
     dbTransaccionData:

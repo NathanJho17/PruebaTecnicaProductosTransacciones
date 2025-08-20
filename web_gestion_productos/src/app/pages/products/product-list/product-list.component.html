@@ -25,7 +25,7 @@
         </tr>
       </thead>
       <tbody>
-        @for (producto of productosSeleccionados(); track producto.productoId) {
+        @for (producto of displayedProducts(); track producto.productoId) {
         <tr
           class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
         >
@@ -65,6 +65,37 @@
         }
       </tbody>
     </table>
+     <nav class="flex justify-center items-center py-4">
+    <ul class="inline-flex -space-x-px">
+      <li>
+        <button (click)="goToPage(currentPage - 1)" 
+          class="px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg
+                 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400
+                 dark:hover:bg-gray-700 dark:hover:text-white">
+          Prev
+        </button>
+      </li>
+
+      <li *ngFor="let page of [].constructor(totalPages); let i = index">
+        <button (click)="goToPage(i + 1)"
+          [class.bg-blue-500]="currentPage === i + 1"
+          [class.text-white]="currentPage === i + 1"
+          class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700
+                 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+          {{ i + 1 }}
+        </button>
+      </li>
+
+      <li>
+        <button (click)="goToPage(currentPage + 1)" 
+          class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg
+                 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400
+                 dark:hover:bg-gray-700 dark:hover:text-white">
+          Next
+        </button>
+      </li>
+    </ul>
+  </nav>
   </div>
 @if (deleteMessage()) {
   <div id="alert-2" class="flex items-center p-4 mb-4 text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">

@@ -4,11 +4,12 @@ import { ProductoVerDTO } from '../../../models/DTOs/ProductoDTO.model';
 import { ImageComponent } from '../../../components/image/image.component';
 import { ButtonComponent } from '../../../components/button/button.component';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [ImageComponent, ButtonComponent],
+  imports: [ImageComponent, ButtonComponent,CommonModule],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
@@ -19,25 +20,31 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
     this.getProducts(1, 10);
 
-    
-}
+
+  }
 
   productos = signal<ProductoVerDTO[]>([]);
 
-  productosSeleccionados = signal<ProductoVerDTO[]>([]);
   itemSeleccionado = signal<number>(5);
   deleteMessage = signal<string>('');
 
   totalRegistros = signal<number>(0);
+  displayedProducts = signal<ProductoVerDTO[]>([]);
 
-  
+  currentPage = 1;
+  pageSize = 5;
+  totalPages = 0;
+
   getProducts(desde: number, limite: number) {
+    const pagina=1;
     this.productService.obtenerProductos(desde, limite).subscribe({
       next: (data) => {
         console.log(data);
         this.productos.set(data.datos);
         this.totalRegistros.set(this.productos().length);
-        this.productosSeleccionados.set(this.productos().slice(0, this.itemSeleccionado()));
+        this.totalPages = Math.ceil(this.productos().length / this.pageSize); 
+        this.currentPage = pagina;
+        this.updateDisplayedProducts();
       }
     });
   }
@@ -59,6 +66,21 @@ export class ProductListComponent implements OnInit {
 
   routeToTtansactionsProduct(productoId: number) {
     this.router.navigate(['/transactions/product', productoId]);
+  }
+
+  updateDisplayedProducts() {
+    const start = (this.currentPage - 1) * this.pageSize;
+    const end = start + this.pageSize;
+    console.log(start);
+    console.log(end);
+
+    this.displayedProducts.set(this.productos().slice(start, end));
+  }
+
+  goToPage(page: number) {
+    if (page < 1 || page > this.totalPages) return;
+    this.currentPage = page;
+    this.updateDisplayedProducts();
   }
 
 }

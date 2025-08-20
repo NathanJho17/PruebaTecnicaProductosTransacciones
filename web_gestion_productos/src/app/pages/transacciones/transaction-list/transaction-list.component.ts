@@ -55,7 +55,7 @@ export class TransactionListComponent implements OnInit {
       next: (data) => {
         console.log(data);
         this.transactions.set(data.datos);
-        this.totalPages = Math.ceil(this.transactions().length / this.pageSize); // totalPages correcto
+        this.totalPages = Math.ceil(this.transactions().length / this.pageSize);
         this.currentPage = pagina;
         this.updateDisplayedTransacciones();
       }

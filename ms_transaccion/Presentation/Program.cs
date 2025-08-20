@@ -52,6 +52,17 @@ builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.AllowAnyOrigin()    // Permite cualquier dominio
+              .AllowAnyHeader()    // Permite cualquier header
+              .AllowAnyMethod();   // Permite GET, POST, PUT, DELETE, etc.
+    });
+});
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -64,6 +75,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseSwagger();
 app.UseSwaggerUI();
+
+app.UseCors();
 
 app.UseHttpsRedirection();
 app.UseRouting();
