@@ -7,8 +7,12 @@
       "RelativeMoniker": "D:0:0:{F7CF2075-0DAB-44CB-84C3-8ABB932C5DE7}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\productorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A065F016-7FC9-4BAE-B639-510719F2A5FA}|Application\\Application.csproj|c:\\appjele\\ms_producto\\application\\usescases\\listarproductosusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A065F016-7FC9-4BAE-B639-510719F2A5FA}|Application\\Application.csproj|solutionrelative:application\\usescases\\listarproductosusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A065F016-7FC9-4BAE-B639-510719F2A5FA}|Application\\Application.csproj|c:\\appjele\\ms_producto\\application\\usescases\\eliminarproductosoftusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A065F016-7FC9-4BAE-B639-510719F2A5FA}|Application\\Application.csproj|solutionrelative:application\\usescases\\eliminarproductosoftusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A065F016-7FC9-4BAE-B639-510719F2A5FA}|Application\\Application.csproj|c:\\appjele\\ms_producto\\application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A065F016-7FC9-4BAE-B639-510719F2A5FA}|Application\\Application.csproj|solutionrelative:application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +22,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EliminarProductoSoftUseCase.cs",
+              "DocumentMoniker": "C:\\appJEle\\ms_producto\\Application\\UsesCases\\EliminarProductoSoftUseCase.cs",
+              "RelativeDocumentMoniker": "Application\\UsesCases\\EliminarProductoSoftUseCase.cs",
+              "ToolTip": "C:\\appJEle\\ms_producto\\Application\\UsesCases\\EliminarProductoSoftUseCase.cs",
+              "RelativeToolTip": "Application\\UsesCases\\EliminarProductoSoftUseCase.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T13:58:21.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\appJEle\\ms_producto\\Application\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Application\\Mapping\\MappingProfile.cs",
+              "ToolTip": "C:\\appJEle\\ms_producto\\Application\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "Application\\Mapping\\MappingProfile.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T13:54:24.713Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -32,22 +62,9 @@
               "RelativeDocumentMoniker": "Infrastructure\\Repository\\ProductoRepository.cs",
               "ToolTip": "C:\\appJEle\\ms_producto\\Infrastructure\\Repository\\ProductoRepository.cs",
               "RelativeToolTip": "Infrastructure\\Repository\\ProductoRepository.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAkwEkAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAgwEMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-19T00:30:20.617Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ListarProductosUseCase.cs",
-              "DocumentMoniker": "C:\\appJEle\\ms_producto\\Application\\UsesCases\\ListarProductosUseCase.cs",
-              "RelativeDocumentMoniker": "Application\\UsesCases\\ListarProductosUseCase.cs",
-              "ToolTip": "C:\\appJEle\\ms_producto\\Application\\UsesCases\\ListarProductosUseCase.cs",
-              "RelativeToolTip": "Application\\UsesCases\\ListarProductosUseCase.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T00:29:49.442Z",
               "EditorCaption": ""
             }
           ]

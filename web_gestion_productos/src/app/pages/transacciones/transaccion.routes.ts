@@ -1,7 +1,8 @@
 import { Routes } from "@angular/router";
 import { TransactionListComponent } from "./transaction-list/transaction-list.component";
+import { TransactionAddComponent } from "./transaction-add/transaction-add.component";
 
 export const transaccion_routes: Routes = [
     { path: 'product/:productoId', component: TransactionListComponent },
-
+     { path: 'product/:productoId/add', component: TransactionAddComponent },
 ];

@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "C:\\appJEle\\ms_producto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6FC1624B-1EB4-4269-B690-3C6548B4FB8B}|Presentation\\Presentation.csproj|c:\\appjele\\ms_producto\\presentation\\controller\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6FC1624B-1EB4-4269-B690-3C6548B4FB8B}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controller\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6FC1624B-1EB4-4269-B690-3C6548B4FB8B}|Presentation\\Presentation.csproj|c:\\appjele\\ms_producto\\presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6FC1624B-1EB4-4269-B690-3C6548B4FB8B}|Presentation\\Presentation.csproj|solutionrelative:presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A065F016-7FC9-4BAE-B639-510719F2A5FA}|Application\\Application.csproj|c:\\appjele\\ms_producto\\application\\usescases\\listarcategoriausecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A065F016-7FC9-4BAE-B639-510719F2A5FA}|Application\\Application.csproj|solutionrelative:application\\usescases\\listarcategoriausecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A065F016-7FC9-4BAE-B639-510719F2A5FA}|Application\\Application.csproj|c:\\appjele\\ms_producto\\application\\usescases\\listarproductosusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A065F016-7FC9-4BAE-B639-510719F2A5FA}|Application\\Application.csproj|solutionrelative:application\\usescases\\listarproductosusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7CF2075-0DAB-44CB-84C3-8ABB932C5DE7}|Infrastructure\\Infrastructure.csproj|c:\\appjele\\ms_producto\\infrastructure\\repository\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7CF2075-0DAB-44CB-84C3-8ABB932C5DE7}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\categoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DBB95E8-87DD-45D4-BF5C-C6F0F5623DE3}|Domain\\Domain.csproj|c:\\appjele\\ms_producto\\domain\\interfaces\\icategoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DBB95E8-87DD-45D4-BF5C-C6F0F5623DE3}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\icategoriarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A065F016-7FC9-4BAE-B639-510719F2A5FA}|Application\\Application.csproj|c:\\appjele\\ms_producto\\application\\dtos\\productoeditardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A065F016-7FC9-4BAE-B639-510719F2A5FA}|Application\\Application.csproj|solutionrelative:application\\dtos\\productoeditardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F7CF2075-0DAB-44CB-84C3-8ABB932C5DE7}|Infrastructure\\Infrastructure.csproj|c:\\appjele\\ms_producto\\infrastructure\\repository\\productorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F7CF2075-0DAB-44CB-84C3-8ABB932C5DE7}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repository\\productorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A065F016-7FC9-4BAE-B639-510719F2A5FA}|Application\\Application.csproj|c:\\appjele\\ms_producto\\application\\usescases\\eliminarproductosoftusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A065F016-7FC9-4BAE-B639-510719F2A5FA}|Application\\Application.csproj|solutionrelative:application\\usescases\\eliminarproductosoftusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A065F016-7FC9-4BAE-B639-510719F2A5FA}|Application\\Application.csproj|c:\\appjele\\ms_producto\\application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A065F016-7FC9-4BAE-B639-510719F2A5FA}|Application\\Application.csproj|solutionrelative:application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,92 +35,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CategoriaController.cs",
-              "DocumentMoniker": "C:\\appJEle\\ms_producto\\Presentation\\Controller\\CategoriaController.cs",
-              "RelativeDocumentMoniker": "Presentation\\Controller\\CategoriaController.cs",
-              "ToolTip": "C:\\appJEle\\ms_producto\\Presentation\\Controller\\CategoriaController.cs",
-              "RelativeToolTip": "Presentation\\Controller\\CategoriaController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAABQAAAAAAAAAA==",
+              "Title": "ProductoEditarDTO.cs",
+              "DocumentMoniker": "C:\\appJEle\\ms_producto\\Application\\DTOs\\ProductoEditarDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\ProductoEditarDTO.cs",
+              "ToolTip": "C:\\appJEle\\ms_producto\\Application\\DTOs\\ProductoEditarDTO.cs",
+              "RelativeToolTip": "Application\\DTOs\\ProductoEditarDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T02:47:14.596Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\appJEle\\ms_producto\\Presentation\\Program.cs",
-              "RelativeDocumentMoniker": "Presentation\\Program.cs",
-              "ToolTip": "C:\\appJEle\\ms_producto\\Presentation\\Program.cs",
-              "RelativeToolTip": "Presentation\\Program.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAABkAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T02:46:35.384Z",
+              "WhenOpened": "2025-08-20T14:06:42.422Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ListarCategoriaUseCase.cs",
-              "DocumentMoniker": "C:\\appJEle\\ms_producto\\Application\\UsesCases\\ListarCategoriaUseCase.cs",
-              "RelativeDocumentMoniker": "Application\\UsesCases\\ListarCategoriaUseCase.cs",
-              "ToolTip": "C:\\appJEle\\ms_producto\\Application\\UsesCases\\ListarCategoriaUseCase.cs",
-              "RelativeToolTip": "Application\\UsesCases\\ListarCategoriaUseCase.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
+              "Title": "EliminarProductoSoftUseCase.cs",
+              "DocumentMoniker": "C:\\appJEle\\ms_producto\\Application\\UsesCases\\EliminarProductoSoftUseCase.cs",
+              "RelativeDocumentMoniker": "Application\\UsesCases\\EliminarProductoSoftUseCase.cs",
+              "ToolTip": "C:\\appJEle\\ms_producto\\Application\\UsesCases\\EliminarProductoSoftUseCase.cs",
+              "RelativeToolTip": "Application\\UsesCases\\EliminarProductoSoftUseCase.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T02:43:12.824Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T13:58:21.498Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CategoriaRepository.cs",
-              "DocumentMoniker": "C:\\appJEle\\ms_producto\\Infrastructure\\Repository\\CategoriaRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repository\\CategoriaRepository.cs",
-              "ToolTip": "C:\\appJEle\\ms_producto\\Infrastructure\\Repository\\CategoriaRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repository\\CategoriaRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAA+AAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\appJEle\\ms_producto\\Application\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Application\\Mapping\\MappingProfile.cs",
+              "ToolTip": "C:\\appJEle\\ms_producto\\Application\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "Application\\Mapping\\MappingProfile.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T02:41:19.043Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T13:54:24.713Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ICategoriaRepository.cs",
-              "DocumentMoniker": "C:\\appJEle\\ms_producto\\Domain\\Interfaces\\ICategoriaRepository.cs",
-              "RelativeDocumentMoniker": "Domain\\Interfaces\\ICategoriaRepository.cs",
-              "ToolTip": "C:\\appJEle\\ms_producto\\Domain\\Interfaces\\ICategoriaRepository.cs",
-              "RelativeToolTip": "Domain\\Interfaces\\ICategoriaRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T02:40:24.284Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "ProductoRepository.cs",
               "DocumentMoniker": "C:\\appJEle\\ms_producto\\Infrastructure\\Repository\\ProductoRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repository\\ProductoRepository.cs",
               "ToolTip": "C:\\appJEle\\ms_producto\\Infrastructure\\Repository\\ProductoRepository.cs",
               "RelativeToolTip": "Infrastructure\\Repository\\ProductoRepository.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAkwEkAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAgwEMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-19T00:30:20.617Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ListarProductosUseCase.cs",
-              "DocumentMoniker": "C:\\appJEle\\ms_producto\\Application\\UsesCases\\ListarProductosUseCase.cs",
-              "RelativeDocumentMoniker": "Application\\UsesCases\\ListarProductosUseCase.cs",
-              "ToolTip": "C:\\appJEle\\ms_producto\\Application\\UsesCases\\ListarProductosUseCase.cs",
-              "RelativeToolTip": "Application\\UsesCases\\ListarProductosUseCase.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAB3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T00:29:49.442Z",
               "EditorCaption": ""
             }
           ]

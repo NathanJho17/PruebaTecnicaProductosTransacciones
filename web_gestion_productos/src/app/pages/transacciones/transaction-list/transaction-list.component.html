@@ -1,1 +1,46 @@
-<p>transaction-list works!</p>
+<div class="container-transaccions">
+  <app-button
+    [textButton]="'Agregar'"
+    [colorButton]="'blue'"
+    [colorTextButton]="'#fff'"
+    [actionButton]="'Add'"
+    [entity]="'Transaccion'"
+  />
+  <div class="product-table-wrapper">
+    <table class="transactions-table">
+      <thead>
+        <tr>
+          <th>Nombre del producto</th>
+          <th>Stock</th>
+          <th>Identificador</th>
+          <th>Tipo transacción</th>
+          <th>Cantidad</th>
+          <th>Precio unitario</th>
+          <th>Precio total</th>
+          <th>Fecha de creación</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (transaction of transactions(); track
+        transaction.identificadorUnico) {
+        <tr>
+          <td>{{ transaction.nombreProducto }}</td>
+          <td>{{ transaction.stockProducto }}</td>
+          <td>{{ transaction.identificadorUnico }}</td>
+          <td>{{ transaction.tipoTransaccion }}</td>
+          <td>{{ transaction.cantidad }}</td>
+          <td>{{ transaction.precioUnitario }}</td>
+          <td>{{ transaction.precioTotal }}</td>
+          <td>{{ transaction.fechaCreacion | createDate }}</td>
+          <td>
+            <button>Editar</button>
+            <button (click)="deleteTransaction(transaction.identificadorUnico)">Eliminar</button>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  <span>{{ deleteMessage() }}</span>
+</div>

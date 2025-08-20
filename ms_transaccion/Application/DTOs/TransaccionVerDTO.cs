@@ -16,6 +16,8 @@ namespace Application.DTOs
 
         public  string TipoTransaccion { get; set; }
 
+        public int ProductoId { get; set; }
+
         public string NombreProducto { get; set; }
         public int StockProducto { get; set; }
 

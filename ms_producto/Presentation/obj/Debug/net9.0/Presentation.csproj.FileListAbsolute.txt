@@ -172,3 +172,4 @@ C:\appJEle\ms_producto\Presentation\bin\Debug\net9.0\Microsoft.Extensions.Loggin
 C:\appJEle\ms_producto\Presentation\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
 C:\appJEle\ms_producto\Presentation\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
 C:\appJEle\ms_producto\Presentation\bin\Debug\net9.0\System.Text.Json.dll
+C:\appJEle\ms_producto\Presentation\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

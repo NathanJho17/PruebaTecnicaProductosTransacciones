@@ -34,7 +34,7 @@ export class TransactionService {
      return this.http.put<RespuestaGenerica<TransaccionVerDTO>>(`${this.apiUrl}/${id}`,editBody);
    }
  
-   eliminarTransaccion(id:number): Observable<RespuestaGenerica<boolean>> {
+   eliminarTransaccion(id:string): Observable<RespuestaGenerica<boolean>> {
      return this.http.delete<RespuestaGenerica<boolean>>(`${this.apiUrl}/${id}`);
    }
 }

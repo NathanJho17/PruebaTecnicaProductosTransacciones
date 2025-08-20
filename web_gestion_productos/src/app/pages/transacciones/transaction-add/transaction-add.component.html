@@ -1,0 +1,8 @@
+<div class="container-form">
+  <app-form-transaction
+    [formType]="'Registro'"
+    (transactionFull)="createTransaction($event)"
+  />
+  <span class="message-create-edit">{{ createdMessage() }}</span>
+</div>
+

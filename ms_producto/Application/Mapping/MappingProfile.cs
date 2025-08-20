@@ -27,8 +27,13 @@ public class MappingProfile : Profile
         //Map para editar producto
 
         CreateMap<ProductoEditarDTO, Producto>()
-         .ConstructUsing(dto => new Producto(dto.NombreProducto, dto.Descripcion, dto.Precio, dto.Stock, dto.IdCategoria, dto.Imagen, dto.EsActivo));
-
+      .ForMember(dest => dest.Nombre, opt => opt.MapFrom(src => src.NombreProducto))
+      .ForMember(dest => dest.Descripcion, opt => opt.MapFrom(src => src.Descripcion))
+      .ForMember(dest => dest.Precio, opt => opt.MapFrom(src => src.Precio))
+      .ForMember(dest => dest.Stock, opt => opt.MapFrom(src => src.Stock))
+      .ForMember(dest => dest.CategoriaId, opt => opt.MapFrom(src => src.IdCategoria))
+      .ForMember(dest => dest.Imagen, opt => opt.MapFrom(src => src.Imagen))
+      .ForMember(dest => dest.Activo, opt => opt.MapFrom(src => src.EsActivo));
 
         //Map para ver categorías
 

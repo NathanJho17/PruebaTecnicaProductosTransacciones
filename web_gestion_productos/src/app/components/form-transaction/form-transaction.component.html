@@ -1,0 +1,111 @@
+<div class="container-form">
+  <h2 class="tittle-form">{{ formTittle }}</h2>
+  <form
+    class="form-transaction"
+    [formGroup]="transactionForm"
+    (ngSubmit)="saveTransaction()"
+  >
+    <div class="form-col">
+      <label for="id">ID: </label>
+      <input id="id" type="text" formControlName="id" />
+
+      <label for="tipoTransaccion">Tipo Transacción: </label>
+      <select
+        id="tipoTransaccion"
+        formControlName="tipoTransaccion"
+        class="form-select"
+        (change)="onTipoTransaccionChange($event)">
+      >
+        <option value="" disabled>-- Seleccione tipo transacción --</option>
+        <option *ngFor="let tipo of tipoTransacciones" [value]="tipo">
+          {{tipo }}
+        </option>
+      </select>
+      @if (transactionForm.get('tipoTransaccion')?.invalid &&
+      transactionForm.get('tipoTransaccion')?.touched) {
+      <div class="text-danger">
+        @if (transactionForm.get('tipoTransaccion')?.errors?.['required']) {
+        <span>Este campo es requerido</span>
+        }
+      </div>
+      }
+
+     
+      <label for="cantidad">cantidad: </label>
+      <input
+        id="cantidad"
+        type="text"
+        [class.input-danger]="
+          transactionForm.get('cantidad')?.invalid &&
+          transactionForm.get('cantidad')?.touched
+        "
+        formControlName="cantidad"
+      />
+      @if (transactionForm.get('cantidad')?.invalid &&
+      transactionForm.get('cantidad')?.touched) {
+      <div class="text-danger">
+        @if (transactionForm.get('cantidad')?.errors?.['required']) {
+        <span>Este campo es requerido</span>
+        }
+      </div>
+      }
+
+      <button type="button" class="btn-reset" (click)="resetForm()">
+        Reiniciar
+      </button>
+    </div>
+
+    <div class="form-col">
+      <label for="precioUnitario">precioUnitario: </label>
+      <input
+        id="precioUnitario"
+        type="text"
+        [class.input-danger]="
+          transactionForm.get('precioUnitario')?.invalid && transactionForm.get('precioUnitario')?.touched
+        "
+        formControlName="precioUnitario"
+      />
+
+      @if (transactionForm.get('precioUnitario')?.invalid &&
+      transactionForm.get('precioUnitario')?.touched) {
+      <div class="text-danger">
+        @if (transactionForm.get('precioUnitario')?.errors?.['required']) {
+        <span>Este campo es requerido</span>
+        }
+      </div>
+      }
+
+      <label for="detalle">detalle: </label>
+      <input
+        id="detalle"
+        type="text"
+        [class.input-danger]="
+          transactionForm.get('detalle')?.invalid &&
+          transactionForm.get('detalle')?.touched
+        "
+        formControlName="detalle"
+      />
+
+      @if (transactionForm.get('detalle')?.invalid &&
+      transactionForm.get('detalle')?.touched) {
+      <div class="text-danger">
+        @if (transactionForm.get('detalle')?.errors?.['required']) {
+        <span>Este campo es requerido</span>
+        }
+      </div>
+      }
+
+      <button
+        type="submit"
+        [ngClass]="{
+          'btn-submit': transactionForm.valid,
+          'btn-submit-disable': transactionForm.invalid
+        }"
+        [disabled]="transactionForm.invalid"
+      >
+        Enviar
+      </button>
+    </div>
+  </form>
+</div>
+

@@ -17,7 +17,7 @@ public class ProductoRepository : IProductoRepository
         try
         {
             producto.Activo = false;
-            _context.Entry(producto).State = EntityState.Modified;
+            _context.Producto.Update(producto);
             await _context.SaveChangesAsync();
             return true;
         }

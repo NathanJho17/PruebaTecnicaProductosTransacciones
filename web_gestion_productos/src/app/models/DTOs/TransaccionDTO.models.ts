@@ -1,3 +1,5 @@
+export type tipoTransaccion='venta'|'compra';
+
 export interface TransaccionVerDTO {
   identificadorUnico: string;     
   esActivo: boolean;
@@ -5,6 +7,7 @@ export interface TransaccionVerDTO {
   tipoTransaccion: 'compra' | 'venta'; 
   nombreProducto: string;
   stockProducto: number;
+  productoId:number;
   cantidad: number;
   precioUnitario: number;
   precioTotal: number;
