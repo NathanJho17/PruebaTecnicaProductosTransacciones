@@ -1,54 +1,39 @@
--- DROP SCHEMA dbo;
-
-CREATE SCHEMA dbo;
--- DB_productos.dbo.Categoria definition
-
--- Drop table
-
--- DROP TABLE DB_productos.dbo.Categoria;
-
-CREATE TABLE DB_productos.dbo.Categoria (
-	Id int IDENTITY(1,1) NOT NULL,
-	Nombre nvarchar(MAX) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-	Descripcion nvarchar(MAX) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-	Activo bit NOT NULL,
-	FechaCreacion datetime2 NOT NULL,
-	CONSTRAINT PK_Categoria PRIMARY KEY (Id)
-);
-
-
--- DB_productos.dbo.[__EFMigrationsHistory] definition
-
--- Drop table
-
--- DROP TABLE DB_productos.dbo.[__EFMigrationsHistory];
-
-CREATE TABLE DB_productos.dbo.[__EFMigrationsHistory] (
-	MigrationId nvarchar(150) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-	ProductVersion nvarchar(32) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-	CONSTRAINT PK___EFMigrationsHistory PRIMARY KEY (MigrationId)
-);
-
-
--- DB_productos.dbo.Producto definition
-
--- Drop table
-
--- DROP TABLE DB_productos.dbo.Producto;
-
-CREATE TABLE DB_productos.dbo.Producto (
-	Id int IDENTITY(1,1) NOT NULL,
-	Nombre nvarchar(MAX) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-	Descripcion nvarchar(MAX) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-	Precio decimal(18,2) NOT NULL,
-	Stock int NOT NULL,
-	CategoriaId int NOT NULL,
-	Imagen nvarchar(MAX) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-	Activo bit NOT NULL,
-	FechaCreacion datetime2 NOT NULL,
-	CONSTRAINT PK_Producto PRIMARY KEY (Id),
-	CONSTRAINT FK_Producto_Categoria_CategoriaId FOREIGN KEY (CategoriaId) REFERENCES DB_productos.dbo.Categoria(Id) ON DELETE CASCADE
-);
- CREATE NONCLUSTERED INDEX IX_Producto_CategoriaId ON dbo.Producto (  CategoriaId ASC  )  
-	 WITH (  PAD_INDEX = OFF ,FILLFACTOR = 100  ,SORT_IN_TEMPDB = OFF , IGNORE_DUP_KEY = OFF , STATISTICS_NORECOMPUTE = OFF , ONLINE = OFF , ALLOW_ROW_LOCKS = ON , ALLOW_PAGE_LOCKS = ON  )
-	 ON [PRIMARY ] ;
+	IF DB_ID('DB_productos') IS NULL
+	BEGIN
+	    CREATE DATABASE DB_productos;
+	END
+	GO
+	
+	USE DB_productos;
+	GO
+	
+	CREATE TABLE dbo.Categoria (
+	    Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	    Nombre NVARCHAR(100) NOT NULL,
+	    Descripcion NVARCHAR(500) NOT NULL,
+	    Activo BIT NOT NULL DEFAULT 1,
+	    FechaCreacion DATETIME2 NOT NULL DEFAULT SYSDATETIME()
+	);
+	GO;
+	
+	CREATE TABLE dbo.__EFMigrationsHistory (
+	    MigrationId NVARCHAR(150) NOT NULL PRIMARY KEY,
+	    ProductVersion NVARCHAR(32) NOT NULL
+	);
+	GO;
+	
+	CREATE TABLE dbo.Producto (
+	    Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	    Nombre NVARCHAR(200) NOT NULL,
+	    Descripcion NVARCHAR(500) NOT NULL,
+	    Precio DECIMAL(18,2) NOT NULL,
+	    Stock INT NOT NULL DEFAULT 0,
+	    CategoriaId INT NOT NULL,
+	    Imagen NVARCHAR(500) NULL,
+	    Activo BIT NOT NULL DEFAULT 1,
+	    FechaCreacion DATETIME2 NOT NULL DEFAULT SYSDATETIME(),
+	    CONSTRAINT FK_Producto_Categoria FOREIGN KEY (CategoriaId)
+	        REFERENCES dbo.Categoria(Id)
+	        ON DELETE CASCADE
+	);
+	GO;
